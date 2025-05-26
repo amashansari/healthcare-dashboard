@@ -17,6 +17,12 @@ const AnatomySection = () => {
             <div className="anatomy-body">
               <img src={AnatomyBody} alt="" />
             </div>
+            <div className="healthy-heart">
+              ❤️  Healthy Heart
+            </div>
+            <div className="healthy-leg">
+              🦵  Healthy Leg
+            </div>
             <div className="zoom-glass">
               <img src={ZoomIcon} alt="" />
             </div>

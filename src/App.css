@@ -374,6 +374,30 @@ li {
   height: 100%;
 }
 
+.healthy-heart {
+  position: absolute;
+  top: 22%;
+  right: 0px;
+  background: var(--bg-color-appointment-active);
+  color: white;
+  font-family: 'header';
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.healthy-leg {
+  position: absolute;
+  bottom: 33%;
+  left: 20px;
+  background: cyan;
+  color: black;
+  font-family: 'header';
+  font-size: 14px;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
 .anatomy-body-right {
   width: calc(100% - 50% - 60px);
   height: 100%;
@@ -853,7 +877,7 @@ li {
     padding-right: 20px;
   }
 
-  .mobile-sidevar  {
+  .mobile-sidevar {
     width: 100vw;
   }
 
