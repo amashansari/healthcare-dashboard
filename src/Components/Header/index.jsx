@@ -72,7 +72,7 @@ const Header = () => {
       <div className={`main-mobile-sidebar ${isToggle == true ? 'show-sidebar' : ''}`}>
         <div className={`mobile-sidevar `}>
           <div className="mobile-top">
-            <div className="healthcare-logo">
+            <div className="healthcare-logo" style={{width: '100%'}}>
               <span className="health">Health</span><span className="care">care.</span>
             </div>
             <div className="healthcare-add-new-profile" onClick={() => handleToggle()}>
