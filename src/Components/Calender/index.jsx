@@ -6,7 +6,7 @@ const Calender = () => {
 
   const weekDays = [
     { day: 'Mon', date: 25, times: ['10:00', '11:00', '12:00'] },
-    { day: 'Tues', date: 26, times: ['08:00', '09:00', '11:00'] },
+    { day: 'Tues', date: 26, times: ['08:00', '09:00', '11:00'], apply:true },
     { day: 'Wed', date: 27, times: ['12:00', '', '13:00'] },
     { day: 'Thurs', date: 28, times: ['11:00', '14:00', ''] },
     { day: 'Fri', date: 29, times: ['14:00', '', '16:00'] },
@@ -89,7 +89,7 @@ const Calender = () => {
             {weekDays.map((day, dayIdx) => (
               <div
                 key={dayIdx}
-                className={`calendar-day ${day.isDimmed ? 'dimmed' : ''}`}
+                className={`calendar-day ${day.isDimmed ? 'dimmed' : ''} ${day.apply == true ? 'custom-bg' : '' }`}
               >
                 <div className="day-label">{day.day}</div>
                 <div className="day-date">{day.date}</div>

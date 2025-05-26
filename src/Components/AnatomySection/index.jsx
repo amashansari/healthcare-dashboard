@@ -1,4 +1,5 @@
 import AnatomyBody from '../../assets/Image/human-body.png'
+import Rotate from '../../assets/Image/rotate.png'
 import ZoomIcon from '../../assets/Icon/magnifying-glass.svg'
 import LungsIcon from '../../assets/Icon/lungs-icon.svg'
 import TeethIcon from '../../assets/Icon/tooth-icon.svg'
@@ -22,6 +23,9 @@ const AnatomySection = () => {
             </div>
             <div className="healthy-leg">
               🦵  Healthy Leg
+            </div>
+            <div className="rotate">
+              <img src={Rotate} alt="" />
             </div>
             <div className="zoom-glass">
               <img src={ZoomIcon} alt="" />
