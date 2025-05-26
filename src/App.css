@@ -1,0 +1,869 @@
+@font-face {
+  font-family: 'header';
+  src: url('./assets/Font/header.ttf');
+}
+
+
+#root {
+  --bg-color-1: #f6faff;
+  --bg-color-calender-active: #ecf3fe;
+  --bg-color-appointment-active: #3734a9;
+  --bg-color-appointment-inactive: #dde2f9;
+  --bg-color-profile: #00e2ee;
+
+  --text-color-1: #06e1ee;
+  --text-color-2: #2e3164;
+  --text-color-active: #2e3164;
+  --text-color-inactie: #adb2bc;
+  --text-color-calender: #1d1454;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* //////////////////////////////////////////
+               Header Component 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.mobile-header,
+.mobile-sidevar {
+  display: none;
+}
+
+
+.main-header {
+  width: 100%;
+  height: 120px;
+
+  background: var(--bg-color-1);
+
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.healthcare-logo {
+  width: 270px;
+
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'header';
+}
+
+.healthcare-logo-text {
+  padding-left: 50px;
+}
+
+.health {
+  color: var(--text-color-1);
+}
+
+.care {
+  color: var(--text-color-2);
+}
+
+.sidebar-mid-right {
+  width: calc(100% - 270px);
+  height: 100%;
+  display: flex;
+}
+
+.healthcare-searchbar {
+  width: 50%;
+  height: 100%;
+
+  background-color: white;
+
+}
+
+.healthcare-searchbar-content {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 15px;
+}
+
+.healthcare-searchbar-content input {
+  width: calc(100% - 25px - 10px);
+  height: 40px;
+
+  border: 0;
+  padding-left: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 7px -5px;
+}
+
+.search-bar-icon {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-image {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  left: 10px;
+}
+
+.search-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.healthcare-notification-icon {
+  width: 40PX;
+  height: 40PX;
+
+  border-radius: 8px;
+  padding: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px -5px;
+}
+
+.healthcare-notification-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.healthcare-profile {
+  width: 50%;
+}
+
+.healthcare-profile-content {
+  height: 100%;
+  padding-right: 50px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.healthcare-current-profile {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg-color-profile);
+}
+
+.healthcare-current-profile img {
+  width: 30px;
+  height: 30px;
+}
+
+.healthcare-add-new-profile {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg-color-appointment-active);
+}
+
+.hamburger {
+  display: none;
+}
+
+.healthcare-add-new-profile img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* //////////////////////////////////////////
+                 Main Panel Component 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.main-panel {
+  width: 100%;
+  /* height: calc(100vh - 120px); */
+
+  padding-top: 120px;
+
+  display: flex;
+}
+
+.sidebar {
+  width: 270px;
+  height: calc(100vh - 120px);
+
+  position: fixed;
+
+  background: var(--bg-color-1);
+}
+
+.height-panel {
+  /* width: calc(100vw - 270px); */
+  padding-left: 270px;
+
+  display: flex;
+  overflow-y: auto;
+}
+
+.height-panel::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-overview {
+  width: 50%;
+  height: 100%;
+}
+
+.health-status-card {
+  width: 50%;
+  height: 100%;
+  background: var(--bg-color-1);
+}
+
+/* //////////////////////////////////////////
+                 Sidebar Component 
+  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.main-sidebar {
+  height: 100%;
+
+  padding-left: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: lightgray;
+  font-family: 'header';
+}
+
+.active-sidebar {
+  color: var(--text-color-active);
+}
+
+.general-text {
+  font-size: 12px;
+}
+
+.sidebar-general li,
+.sidebar-tools li {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.tools-text {
+  padding-top: 50px;
+  font-size: 12px;
+}
+
+.sidebar-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  cursor: pointer;
+}
+
+.sidebar-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.sidebar-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-bottom {
+  padding-bottom: 20px;
+}
+
+/* //////////////////////////////////////////
+                   Anatomy Component 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.main-anatomy-section {
+  padding: 0 15px
+}
+
+.anatomy-title {
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anatomy-text {
+  color: var(--text-color-2);
+  font-family: "header";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.date-filter {
+  color: var(--text-color-2);
+  font-family: "header";
+  font-size: 14px;
+}
+
+.main-anatomy-section {
+  padding: 0 15px;
+  height: 100%;
+}
+
+.anatomy-section {
+  width: 100%;
+
+  margin-bottom: 30px;
+  display: flex;
+  gap: 60px;
+}
+
+.anatomy-body-left {
+  width: 50%;
+  height: 100%;
+
+  margin-left: 30px;
+  border-radius: 25px;
+  background: var(--bg-color-1);
+
+  position: relative;
+}
+
+.anatomy-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.anatomy-body {
+  width: 100%;
+  height: 100%;
+}
+
+.anatomy-body-right {
+  width: calc(100% - 50% - 60px);
+  height: 100%;
+}
+
+.body-part {
+  width: 100%;
+  height: 120px;
+
+  margin-bottom: 18px;
+  border-radius: 25px;
+  background: var(--bg-color-1);
+}
+
+.anatomy-activity {
+  width: 100%;
+  height: 170px;
+
+  border-radius: 25px;
+  background: var(--bg-color-1);
+}
+
+.zoom-glass {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 100;
+}
+
+.zoom-glass img {
+  width: 100%;
+  height: 100%;
+}
+
+.body-part-top {
+  padding: 10px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.part-image {
+  width: 35px;
+  height: 35px;
+}
+
+.part-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.part-name {
+  font-family: 'header';
+  color: var(--text-color-2);
+}
+
+.date {
+  padding-left: 20px;
+  padding-top: 3px;
+
+  color: lightgray;
+  font-family: 'header';
+  font-size: 12px;
+}
+
+.body-part-bottom {
+  width: calc(100% - 40px);
+  ;
+  height: 8px;
+
+  margin-left: 20px;
+  margin-top: 5px;
+
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.progress-bar-red {
+  height: 100%;
+  width: 80%;
+  background-color: #c0392b;
+  border-radius: 10px 0 0 10px;
+}
+
+.progress-bar-cyan {
+  height: 100%;
+  width: 70%;
+  background-color: #2bc0a7;
+  border-radius: 10px 0 0 10px;
+}
+
+.progress-bar-orange {
+  height: 100%;
+  width: 70%;
+  background-color: #ee4936;
+  border-radius: 10px 0 0 10px;
+}
+
+.activity-bottom {
+  padding: 0 22px;
+}
+
+.bottom-chart {
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+}
+
+.bottom-chart-1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.activty-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 22px;
+}
+
+.active-title-left {
+  font-size: 22px;
+  font-family: 'header';
+  font-weight: 700;
+}
+
+.active-title-right {
+  color: lightgray;
+  font-family: 'header';
+  font-size: 15px;
+}
+
+.active-bars-1 {
+  height: 100px;
+  width: 6px;
+  border-radius: 8px;
+  background: lightgray;
+}
+
+.active-bars-2 {
+  height: 50px;
+  width: 6px;
+  border-radius: 8px;
+  background: #00ffffc7;
+}
+
+.bar-top {
+  height: 100px;
+  display: flex;
+}
+
+.bar-bottom {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.active-bars-3 {
+  height: 70px;
+  width: 6px;
+  border-radius: 8px;
+  background: lightgray;
+}
+
+.active-bars-4 {
+  height: 40px;
+  width: 6px;
+  border-radius: 8px;
+  background: #6a7cf5;
+}
+
+/* //////////////////////////////////////////
+                   Calender Component 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.calendar-container {
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+}
+
+.calendar-container::-webkit-scrollbar {
+  display: none;
+}
+
+.calender-padding {
+  padding: 0 40px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2d2d2d;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.arrows span {
+  margin: 0 5px;
+  cursor: pointer;
+  color: #5d5dff;
+}
+
+.calendar-grid {
+  width: 100%;
+  overflow-x: auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.calendar-day {
+  background: transparent;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.calendar-day.selected {
+  background: #edf1ff;
+}
+
+.calendar-day.dimmed {
+  opacity: 0.4;
+}
+
+.day-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.day-date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.day-times {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.time-pill {
+  background-color: #d4d9ec;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.time-pill.active-pill {
+  background-color: #433bff;
+  color: white;
+}
+
+.time-dash {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.main-appointments {
+  /* height: calc(100% - 223px); */
+  margin-top: 20px;
+  padding: 0px 55px;
+}
+
+.appointments {
+  display: flex;
+  padding: 7px 0;
+  gap: 25px;
+}
+
+.appointment-small {
+  width: 150px;
+
+  border-radius: 22px;
+  padding: 15px 12px;
+
+  background: var(--bg-color-appointment-inactive);
+  color: var(--text-color-2);
+
+  font-family: 'header';
+  font-size: 12px;
+}
+
+.active-appointment {
+  background: var(--bg-color-appointment-active) !important;
+  color: white !important;
+}
+
+.appointment-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 3px;
+}
+
+.appointment-time,
+.appointment-by {
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.dentist-image {
+  width: 20px;
+  height: 20px;
+}
+
+.dentist-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.dentist {
+  font-size: 20px;
+}
+
+.appointment-big {
+  width: 250px;
+
+  border-radius: 22px;
+  padding: 15px 12px;
+
+  background: var(--bg-color-appointment-inactive);
+  color: var(--text-color-2);
+
+  font-family: 'header';
+  font-size: 12px;
+}
+
+.upcoming-schedule-text {
+  padding: 12px 0;
+  font-size: 22px;
+  font-family: 'header';
+  font-weight: 600;
+}
+
+.upcoming-next {
+  font-size: 16px;
+  font-family: 'header';
+  color: lightgray;
+}
+
+
+@media screen and (max-width : 1025px) {
+  /* .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .main-header {
+    display: none;
+  } */
+
+
+  .healthcare-searchbar {
+    background: transparent;
+  }
+
+  .healthcare-searchbar-content {
+    gap: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mobile-top {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-top .healthcare-add-new-profile {
+    background: transparent;
+    color: var(--text-color-2);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'header';
+  }
+
+  .main-mobile-sidebar {
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+    background-color: #0000002b;
+  }
+
+  .mobile-sidevar {
+    width: 270px;
+    height: 100vh;
+
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    color: lightgray;
+    font-family: 'header';
+
+
+    background: var(--bg-color-1);
+  }
+
+  .show-sidebar {
+    transform: translateX(0);
+  }
+
+  .height-panel {
+    padding-left: 0;
+  }
+
+}
+
+@media screen and (max-width : 850px) {
+  .height-panel {
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .dashboard-overview {
+    margin-bottom: 25px;
+  }
+
+  .dashboard-overview,
+  .health-status-card {
+    width: 100%;
+  }
+
+  .anatomy-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .anatomy-body-right {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width : 551px) {
+  .healthcare-searchbar-content {
+    display: none;
+  }
+
+  .anatomy-body-left {
+    width: 100%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .anatomy-body {
+    width: 200px;
+    height: 350px;
+  }
+
+  .main-appointments {
+    padding: 0 20px;
+  }
+
+  .healthcare-add-new-profile img {
+    width: 35px;
+  }
+}
