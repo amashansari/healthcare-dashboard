@@ -19,7 +19,7 @@ const Calender = () => {
   const appointments = [
     {
       title: 'Dentist',
-      icon: <img src={TeethIcon} alt="Dentist Icon" />,
+      icon: <span role="img">🦷</span>,
       time: '09:00',
       endTime: '10:30',
       doctor: 'Dr.Cameron Williams',
