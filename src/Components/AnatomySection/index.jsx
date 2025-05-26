@@ -85,75 +85,96 @@ const AnatomySection = () => {
           </div>
           <div className="activity-bottom">
             <div className="bottom-chart">
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-1"></div>
+                  <div className="active-bars-2"></div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
                 </div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
-                </div>
+                Mon
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-2"></div>
-                <div className="active-bars-1"></div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-2"></div>
+                  <div className="active-bars-1"></div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
                 </div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
-                </div>
+                Tue
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
+                  <div className="active-bars-1"></div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
+                  <div className="active-bars-2"></div>
                 </div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
-                </div>
+                Wed
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-1"></div>
+                  <div className="active-bars-2"></div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
                 </div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
-                </div>
+                Thu
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-2"></div>
+                  <div className="active-bars-1"></div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
                 </div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
-                </div>
+                Fri
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-1"></div>
+                  <div className="active-bars-2"></div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
                 </div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
-                </div>
+                Sat
               </div>
-              <div className="bottom-chart-1">
-                <div className="active-bars-1"></div>
-                <div className="active-bars-2"></div>
-                <div className="bar-bottom">
-                  <div className="active-bars-3"></div>
+              <div className="chart-1">
+                <div className="bottom-chart-1">
+                  <div className="active-bars-2"></div>
+                  <div className="active-bars-1"></div>
+                  <div className="bar-top">
+                    <div className="active-bars-4"></div>
+                  </div>
+                  <div className="bar-bottom">
+                    <div className="active-bars-3"></div>
+                  </div>
                 </div>
-                <div className="bar-top">
-                  <div className="active-bars-4"></div>
-                </div>
+                Sub
               </div>
             </div>
           </div>
